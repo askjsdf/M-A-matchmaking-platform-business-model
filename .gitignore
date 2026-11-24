@@ -2,3 +2,6 @@
 node_modules/
 .vercel
 *.log
+
+# internal reference material (not deployed, not in repo)
+参考/
