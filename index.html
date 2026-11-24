@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M&A Matchmaking Business Models · 并购撮合平台商业模式</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">M&A</span>
+    <div class="brand-text">
+      <div class="brand-title" data-t="title">M&A Matchmaking · Business Models</div>
+      <div class="brand-sub" data-t="subtitle">32 platforms · 6 archetypes · Interactive analysis</div>
+    </div>
+  </div>
+  <div class="topbar-right">
+    <button id="langToggle" class="lang-btn">中文</button>
+  </div>
+</header>
+
+<nav class="nav">
+  <button class="nav-item active" data-view="overview"><span data-t="nav_overview">Overview</span></button>
+  <button class="nav-item" data-view="canvas"><span data-t="nav_canvas">Business Model Canvas</span></button>
+  <button class="nav-item" data-view="cases"><span data-t="nav_cases">Case Studies</span></button>
+  <button class="nav-item" data-view="bm"><span data-t="nav_bm">Business Model Hypothesis</span></button>
+</nav>
+
+<main>
+  <!-- ============ ① OVERVIEW ============ -->
+  <section id="view-overview" class="view active">
+    <div id="overviewRoot"></div>
+  </section>
+
+  <!-- ============ ② CANVAS ============ -->
+  <section id="view-canvas" class="view">
+    <div class="split">
+      <aside class="selector">
+        <div class="selector-head">
+          <input id="canvasSearch" type="text" placeholder="Search platform…" data-t-ph="search">
+          <button id="compareBtn" class="compare-btn" data-t="compare">Compare (up to 3)</button>
+        </div>
+        <div id="canvasList" class="platform-list"></div>
+      </aside>
+      <div class="canvas-area">
+        <div id="canvasCompareBar" class="compare-bar" hidden></div>
+        <div id="canvasStage" class="canvas-stage"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ③ CASE STUDIES ============ -->
+  <section id="view-cases" class="view">
+    <div id="casesStage"></div>
+  </section>
+
+  <!-- ============ ④ BUSINESS MODEL HYPOTHESIS ============ -->
+  <section id="view-bm" class="view">
+    <div id="bmStage"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span data-t="foot">Sources: proprietary research + Gemini deep-dive (audited filings / Form 990 / official pricing pages). Model estimates are labeled.</span>
+</footer>
+
+<script src="assets/echarts.min.js"></script>
+<script src="data.js"></script>
+<script src="cases.js"></script>
+<script src="bm.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
